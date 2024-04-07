@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  height: 90px;
+  width: 100%;
+  background-color: #14213d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.cart img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+
+}
+.logo h1 {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cart{
+    transition: all 0.5s ease;
+}
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-li a {
+  color: white;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+.nav-li a:hover {
+  color: #fca311;
+}
+
+.fa-cart-shopping {
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.cart sup{
+  position: absolute;
+  color: black;
+  font-size: 17px;
+  background-color:#fca311;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  right: 70px;
+  top: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.fa-cart-shopping:hover {
+  color: #fca311;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 80px;
+  position: relative;
+}
+.card {
+  height: 430px;
+  width: 320px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  padding: 10px 10px;
+  margin: 10px;
+}
+.card img {
+  height: 150px;
+  width: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.card h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cartBtn {
+  height: 37px;
+  width: 170px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background-color: #fca311;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  color: white;
+}
+.cartBtn:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: #ffb338;
+}
+
+.mainCart {
+  height: 639px;
+  max-height: 639px;
+  width: 450px;
+  background-color: #ffb338;
+  position: fixed;
+  right: 0px;
+  top: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 10px;
+  transition: all 0.5s ease;
+overflow-y: auto;
+overflow-x: hidden;
+visibility: hidden;
+}
+
+.mainCart::-webkit-scrollbar{
+  background-color: #ffb338;
+  width: 5px;
+}
+.yourCartItems{
+  display: none;
+}
+.cartActive{
+  display: none;
+
+}
+
+.total-checkout{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0px;
+}
+.checkoutBtn{
+  height: 35px;
+  width: 120px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  font-weight: 600;
+}
+.checkoutBtn:hover{
+  border: 1px solid black;
+}
+.cartBox {
+  height: 140px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.cartBox img {
+  border-radius: 3px;
+  height: 70px;
+  width: auto;
+  object-fit: cover;
+}
+
+.fa-xmark{
+  /* position: absolute; */
+  top: 20px;
+  right: 30px;
+  color: black;
+  transition: all 0.5s ease;
+}
+.fa-xmark:hover{
+  color: #fca311;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+.mainCartBtn {
+  padding: 3px 8px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: lightgrey;
+}
+
+
+
+@media screen and (max-width:500px) {
+ 
+  .logo h1 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: 500;
+   
+  }
+ 
+  .nav-ul {
+    display: none;
+   
+  }
+  .fa-cart-shopping {
+   
+    font-size: 25px;
+    
+  }
+  .cart sup{
+    position: absolute;
+    color: black;
+    font-size: 15px;
+    background-color:#fca311;
+    height: 18px;
+    width: 18px;
+   
+    right: 10px;
+    top: 20px;
+   
+    font-weight: 600;
+  }
+
+  .mainCart {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+   
+  }
+}
